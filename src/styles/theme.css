@@ -1,0 +1,35 @@
+/* src/styles/theme.css — design tokens */
+:root {
+  --navy: #0d1b2a;
+  --blue: #1a73e8;
+  --blue2: #1557b0;
+  --blue3: #0f3d6e;
+  --sky: #4fc3f7;
+  --bg: #f0f4f8;
+  --text: #1a1a2e;
+  --muted: #6b7280;
+  --border: #d1d5db;
+  --card: #ffffff;
+  --danger: #ef4444;
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 2px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+  --sidebar-w: 240px;
+  --topbar-h: 60px;
+  --bottomnav-h: 64px;
+  --transition: 0.2s ease;
+}
+
+body.dark {
+  --navy: #0a1628;
+  --bg: #0f1923;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --border: #2d3748;
+  --card: #1a2332;
+  --shadow: 0 2px 12px rgba(0,0,0,0.3);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.4);
+}
