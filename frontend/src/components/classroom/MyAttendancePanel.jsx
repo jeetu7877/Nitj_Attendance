@@ -15,16 +15,15 @@ export default function MyAttendancePanel({ classId }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getAttendance(classId)
-      .then((d) => {
-        const all = Array.isArray(d) ? d : d.records || [];
-        setRecords(
-          all.filter((r) => r.user_id === user?.id || r.email === user?.email),
-        );
-      })
-      .catch(() => toast("Failed to load attendance", "error"))
-      .finally(() => setLoading(false));
-  }, [classId]);
+  getAttendance(classId)
+    .then((d) => {
+      const all = Array.isArray(d) ? d : d.records || [];
+      
+      setRecords(all);
+    })
+    .catch(() => toast("Failed to load attendance", "error"))
+    .finally(() => setLoading(false));
+}, [classId]);
 
   if (loading) return <Spinner />;
 
