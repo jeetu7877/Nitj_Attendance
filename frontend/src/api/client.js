@@ -1,6 +1,9 @@
 // src/api/client.js
+
 const getBase = () => {
-  return "https://nitj-attendance.onrender.com";
+  const h = window.location.hostname;
+  if (!h || h === "localhost" || h === "127.0.0.1") return "http://localhost:8000";
+  return import.meta.env.VITE_API_URL || window.location.origin;
 };
 
 export const BASE = getBase();
