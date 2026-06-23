@@ -20,7 +20,7 @@ export default function CreateAssignmentModal({ classId, onClose, onCreated }) {
     setLoading(true);
     try {
       const fd = new FormData();
-      fd.append("class_id", classId);
+      fd.append("classroom_id", classId);
       fd.append("title", form.title);
       fd.append("description", form.description);
       fd.append("due_date", form.due_date);
